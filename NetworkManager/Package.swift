@@ -4,25 +4,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "NetworkingModule",
-    platforms: [
-            .iOS(.v13) // 👈 This is required for async/await
-        ],
+    name: "NetworkManager",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
-        
         .library(
-            name: "NetworkingModule",
-            targets: ["NetworkingModule"]),
+            name: "NetworkManager",
+            targets: ["NetworkManager"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "NetworkingModule"),
+            name: "NetworkManager"),
         .testTarget(
-            name: "NetworkingModuleTests",
-            dependencies: ["NetworkingModule"]
+            name: "NetworkManagerTests",
+            dependencies: ["NetworkManager"]
         ),
     ]
 )
